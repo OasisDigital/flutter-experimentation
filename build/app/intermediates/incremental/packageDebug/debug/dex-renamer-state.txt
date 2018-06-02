@@ -1,0 +1,4 @@
+#Fri Jun 01 14:27:52 CDT 2018
+base.0=/home/mcneil/oasis_digital_flutter/new_flutter/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
