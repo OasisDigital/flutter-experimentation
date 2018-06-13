@@ -7,7 +7,7 @@ class MyWidget extends StatelessWidget {
       length: 2,
       child: new Scaffold(
         appBar: AppBar(
-          title: new Text('step_105_tabs'),
+          title: new Text('step_106_tabs'),
           centerTitle: true,
           bottom: TabBar(
             tabs: <Widget>[
