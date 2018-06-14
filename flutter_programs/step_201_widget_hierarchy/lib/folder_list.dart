@@ -6,17 +6,20 @@ class FolderList extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
       padding: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.black),
-      ),
-      child: Column(
+      child: ListBody(
         children: <Widget>[
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
+          SizedBox(height: 2.0),
           FolderItem(),
         ],
       ),
