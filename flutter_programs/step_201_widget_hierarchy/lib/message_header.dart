@@ -5,14 +5,21 @@ class MessageHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
       padding: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(
-        border: Border.all(),
-      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('FROM: Lumbergh'),
-          Text('TO: Me'),
-          Text('DATE: Today'),
+          Text(
+            'From: Lumbergh',
+            textScaleFactor: 1.5,
+          ),
+          Text(
+            'To: Me',
+            textScaleFactor: 1.5,
+          ),
+          Text(
+            'Date: Today',
+            textScaleFactor: 1.5,
+          ),
         ],
       ),
     );
