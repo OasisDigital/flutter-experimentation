@@ -16,6 +16,9 @@ class MessageDisplay extends StatelessWidget {
           SizedBox(
             height: 25.0,
           ),
+          Divider(
+            color: Colors.black,
+          ),
           MessageBody(),
         ],
       ),

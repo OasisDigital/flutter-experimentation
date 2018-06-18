@@ -38,26 +38,30 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         drawer: Drawer(
-          child: Column(
+          child: ListView(
             children: <Widget>[
-              SizedBox(
-                height: 50.0,
-              ),
               Container(
-                alignment: Alignment.centerLeft,
-                child: IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+                color: Colors.blue,
+                child: DrawerHeader(
+                  child: Row(
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      Text(
+                        'Folders',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        textScaleFactor: 2.0,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Text(
-                'Folders',
-                textScaleFactor: 2.5,
-              ),
-              SizedBox(
-                height: 10.0,
               ),
               FolderList(),
             ],
