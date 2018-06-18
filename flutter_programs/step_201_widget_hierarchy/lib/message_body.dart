@@ -6,11 +6,7 @@ class MessageBody extends StatelessWidget {
     return new Container(
       alignment: Alignment.centerLeft,
       padding: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(
-        border: Border(
-          top: BorderSide(color: Colors.black),
-        ),
-      ),
+      decoration: BoxDecoration(),
       child: new Column(
         children: <Widget>[
           Text(

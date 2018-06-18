@@ -16,24 +16,29 @@ class MyListView extends StatelessWidget {
                   SizedBox(
                     width: 91.0,
                     child: Center(
-                      child: Text(recordList.keys.toList()[i]),
+                      child: Text(
+                        recordList.keys.toList()[i],
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 68.0,
                     child: Center(
-                      child: Text(recordList[recordList.keys.toList()[i]]
-                              ['units']
-                          .toStringAsFixed(1)),
+                      child: Text(
+                        recordList[recordList.keys.toList()[i]]['units']
+                            .toStringAsFixed(1),
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 104.0,
                     child: Center(
-                      child: Text('\$' +
-                          recordList[recordList.keys.toList()[i]]
-                                  ['totalRevenue']
-                              .toStringAsFixed(2)),
+                      child: Text(
+                        '\$' +
+                            recordList[recordList.keys.toList()[i]]
+                                    ['totalRevenue']
+                                .toStringAsFixed(2),
+                      ),
                     ),
                   ),
                   SizedBox(
