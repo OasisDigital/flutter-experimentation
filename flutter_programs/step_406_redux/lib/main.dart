@@ -11,8 +11,8 @@ enum Actions {
 }
 
 class AppState {
-  int berries;
-  int apples;
+  final int berries;
+  final int apples;
   AppState({this.berries, this.apples});
 
   static AppState initial() {
@@ -23,17 +23,11 @@ class AppState {
 // The Reducer- the thing that handles actions
 AppState myReducer(AppState state, dynamic action) {
   if (action == Actions.IncrementBerries) {
-    AppState newState = state;
-    newState.berries += 1;
-    return newState;
+    return AppState(berries: state.berries + 1, apples: state.apples);
   } else if (action == Actions.IncrementApples) {
-    AppState newState = state;
-    newState.apples += 1;
-    return newState;
+    return AppState(berries: state.berries, apples: state.apples + 1);
   } else if (action == Actions.IncrementApplesByThree) {
-    AppState newState = state;
-    newState.apples += 3;
-    return newState;
+    return AppState(berries: state.berries, apples: state.apples + 3);
   } else if (action == Actions.EmptyCart) {
     return AppState.initial();
   }
@@ -124,9 +118,9 @@ class BerriesWidget extends StatelessWidget {
               converter: (store) {
                 return store.state.berries.toString();
               },
-              builder: (context, state) {
+              builder: (context, berries) {
                 return Text(
-                  'Current Total: ' + state,
+                  'Current Total: ' + berries,
                   textScaleFactor: 1.5,
                 );
               },
