@@ -25,15 +25,15 @@ AppState myReducer(AppState state, dynamic action) {
   if (action == Actions.IncrementBerries) {
     AppState newState = state;
     newState.berries += 1;
-    return state;
+    return newState;
   } else if (action == Actions.IncrementApples) {
     AppState newState = state;
     newState.apples += 1;
-    return state;
+    return newState;
   } else if (action == Actions.IncrementApplesByThree) {
     AppState newState = state;
     newState.apples += 3;
-    return state;
+    return newState;
   } else if (action == Actions.EmptyCart) {
     return AppState.initial();
   }
