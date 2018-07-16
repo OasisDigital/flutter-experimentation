@@ -43,20 +43,26 @@ class AppState {
 
 AppState myReducer(AppState state, dynamic action) {
   if (action is AddEmployeeAction) {
-    AppState newState = state;
-    newState.currentEmployees.add(newState.potentialEmployees[action.index]);
-    newState.potentialEmployees.removeAt(action.index);
-    return newState;
+    return AppState(
+      currentEmployees: state.currentEmployees
+        ..add(state.potentialEmployees[action.index]),
+      potentialEmployees: state.potentialEmployees..removeAt(action.index),
+    );
   } else if (action is RemoveEmployeeAction) {
-    AppState newState = state;
-    newState.currentEmployees.removeAt(action.index);
-    return newState;
+    return AppState(
+      currentEmployees: state.currentEmployees..removeAt(action.index),
+      potentialEmployees: state.potentialEmployees,
+    );
   } else if (action == HireAllAction) {
-    AppState newState = state;
+    AppState newState = AppState(
+      currentEmployees: state.currentEmployees,
+      potentialEmployees: state.potentialEmployees,
+    );
     for (int i = newState.potentialEmployees.length - 1; i >= 0; i--) {
       newState.currentEmployees.add(newState.potentialEmployees[i]);
       newState.potentialEmployees.removeAt(i);
     }
+    return newState;
   }
   return state;
 }
