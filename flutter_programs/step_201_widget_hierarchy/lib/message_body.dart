@@ -15,7 +15,7 @@ class MessageBody extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Text(
-            'Hi,\nThis is Lumbergh and this is an email.\nBye',
+            'Hi,\nThis is Someone and this is an email.\nBye',
             textAlign: TextAlign.left,
             textScaleFactor: 1.5,
           ),

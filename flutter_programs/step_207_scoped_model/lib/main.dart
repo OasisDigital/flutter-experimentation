@@ -5,22 +5,12 @@ import 'order_model.dart';
 
 void main() => runApp(new MyApp());
 
-class Variables {
-  String string = 'hi';
-}
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScopedModel<OrderModel>(
       model: OrderModel(),
       child: MaterialApp(
-        theme: ThemeData(
-          buttonColor: Colors.blue,
-          buttonTheme: ButtonThemeData(
-            textTheme: ButtonTextTheme.primary,
-          ),
-        ),
         home: Scaffold(
           appBar: AppBar(
             title: Text('Order Management Application'),
@@ -29,7 +19,8 @@ class MyApp extends StatelessWidget {
             child: OrderManager(),
           ),
           floatingActionButton: ScopedModelDescendant<OrderModel>(
-            builder: (context, child, model) {
+            rebuildOnChange: false,
+            builder: (context, _, model) {
               return FloatingActionButton(
                 tooltip: 'clear selected order',
                 backgroundColor: Colors.red,

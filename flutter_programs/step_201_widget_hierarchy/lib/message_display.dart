@@ -13,12 +13,8 @@ class MessageDisplay extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: MessageHeader(),
           ),
-          SizedBox(
-            height: 25.0,
-          ),
-          Divider(
-            color: Colors.black,
-          ),
+          SizedBox(height: 25.0),
+          Divider(color: Colors.black),
           MessageBody(),
         ],
       ),

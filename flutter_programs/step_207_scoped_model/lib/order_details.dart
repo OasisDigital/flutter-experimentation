@@ -7,8 +7,9 @@ import 'order_items.dart';
 class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScopedModelDescendant<OrderModel>(builder: (context, child, model) {
-      return Container(
+    return ScopedModelDescendant<OrderModel>(
+      builder: (context, child, model) {
+        return Container(
           width: double.infinity,
           child: model.activeOrder == null
               ? Text(
@@ -28,7 +29,9 @@ class OrderDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                ));
-    });
+                ),
+        );
+      },
+    );
   }
 }
