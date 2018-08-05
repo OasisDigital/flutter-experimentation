@@ -59,22 +59,25 @@ class _LoopWidgetState extends State<LoopWidget> {
     return Column(
       children: <Widget>[
         _getList(),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: TextField(
-            onSubmitted: (string) {
-              _addToList(_myController.text);
-            },
-            controller: _myController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              icon: FloatingActionButton(
-                child: Icon(Icons.create_new_folder),
-                onPressed: () {
-                  _addToList(_myController.text);
-                },
+        Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: TextField(
+              onSubmitted: (string) {
+                _addToList(_myController.text);
+              },
+              controller: _myController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                icon: FloatingActionButton(
+                  child: Icon(Icons.create_new_folder),
+                  onPressed: () {
+                    _addToList(_myController.text);
+                  },
+                ),
+                hintText: 'folder name (optional)',
               ),
-              hintText: 'folder name (optional)',
             ),
           ),
         ),

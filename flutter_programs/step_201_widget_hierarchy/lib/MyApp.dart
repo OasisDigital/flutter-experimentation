@@ -26,10 +26,7 @@ class HomeScreen extends StatelessWidget {
               Text('Help'),
             ],
           ),
-          centerTitle: true,
-          title: Text(
-            'step_201_widget_hierarchy',
-          ),
+          title: Text('step_201_widget_hierarchy'),
         ),
         body: new TabBarView(
           children: <Widget>[
@@ -37,36 +34,7 @@ class HomeScreen extends StatelessWidget {
             HelpWidget(),
           ],
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: <Widget>[
-              Container(
-                color: Colors.blue,
-                child: DrawerHeader(
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.arrow_back),
-                        color: Colors.white,
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      Text(
-                        'Folders',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                        textScaleFactor: 2.0,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              FolderList(),
-            ],
-          ),
-        ),
+        drawer: FolderList(),
       ),
     );
   }

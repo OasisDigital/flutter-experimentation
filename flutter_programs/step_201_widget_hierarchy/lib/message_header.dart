@@ -9,7 +9,7 @@ class MessageHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'From: Lumbergh',
+            'From: Someone',
             textScaleFactor: 1.5,
           ),
           Text(
